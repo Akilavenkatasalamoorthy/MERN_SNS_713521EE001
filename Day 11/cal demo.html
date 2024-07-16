@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.parent{
+    display: grid;
+        grid-template-columns:repeat(4,1fr);
+        gap:3px;
+        height: 300px;
+        width: 170px; 
+        text-align:center;
+        margin: auto;
+        background-color: rgb(90, 100, 66);
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 10px;
+}
+input{
+    grid-column: 1/-1;
+    width:270;
+    height:100;
+    margin-bottom: 10px;
+    text-align: right;
+    border:none;
+    font-size:small;
+    background-color: rgba(31, 211, 151, 0.952);
+    border: 2px solid black;
+}
+.co{
+    background-color:gray;
+    border: black solid;
+    color: white;
+}
+.col{
+background-color: rgb(76, 59, 92);
+color: white;
+}
+.color{
+background-color: rgb(0, 0, 0);
+color: white;
+}
+.colo{
+background-color:rgb(45, 45, 97);
+color: white;
+}
+button{
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid black;
+}
+body{
+    height:auto;
+    width:auto;
+}
+
+
+</style>
+
+<body>
+    <h1 align="center">Calculator</h1>
+    <center>
+    <div class="parent">  
+    <input type="text" id="disp1" placeholder="0">
+    <button class="col" onclick="clearDisplay()">Ac</button>
+    <button class="co"onclick="negate()">+/-</button>
+    <button class="co"onclick="sanjay('%')">%</button>
+    <button class="co" onclick="sanjay('/')">/</button>
+    <button class="color" onclick="sanjay('7')">7</button>
+    <button class="color" onclick="sanjay('8')">8</button>
+    <button class="color" onclick="sanjay('9')">9</button>
+    <button class="co" onclick="sanjay('*')">x</button>
+    <button class="color" onclick="sanjay('4')">4</button>
+    <button class="color" onclick="sanjay('5')">5</button>
+    <button class="color" onclick="sanjay('6')">6</button>
+    <button class="co" onclick="sanjay('-')">-</button>
+    <button class="color" onclick="sanjay('1')">1</button>
+    <button class="color" onclick="sanjay('2')">2</button>
+    <button class="color" onclick="sanjay('3')">3</button>
+    <button class="co" onclick="sanjay('+')">+</button>
+    <button class="color" onclick="sanjay('0')">0</button>
+    <button class="color" onclick="sanjay('.')">.</button>
+    <button class="color" onclick="backspace()">X</button>
+    <button class="colo" onclick="calculate()">=</button>
+</div>
+</center>
+<script>
+
+    var disp = document.getElementById("disp1");
+    
+    function sanjay(value){
+        disp.value+=value;
+    }
+    function clearDisplay(){
+        disp.value="";
+    }
+    function calculate(){
+        var equation=disp.value;
+        try{
+        disp.value=eval(equation);
+        }
+        catch(e){
+            disp.value='poda';
+        }
+    }
+    function clear()
+    {
+        disp.value+="";
+    }
+    function negate()
+    {
+
+    disp.value*=-1;
+    }
+    function backspace(){
+        disp.value=disp.value.slice(0,-1)
+    }
+</script>
+</body>
+</html>

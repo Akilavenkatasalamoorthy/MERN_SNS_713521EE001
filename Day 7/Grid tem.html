@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .body
+        {
+            border: 5px solid green;
+            height: 300px;
+            display: grid;
+            gap: 5px;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: repeat(2,50px,1fr);
+            grid-template-areas: 'sub1 main' 'sub2 main' 'sub3 sub3';
+        }
+        .body>div
+        {
+            border: 3px solid yellow;
+        }
+        .sub1
+        {
+             grid-area: sub1;
+        }
+        .sub3
+        {
+            grid-area: sub3;
+        }
+        .sub2
+        {
+            grid-area: sub2;
+        }
+        .main
+        {
+            grid-area: main;
+
+        }
+    </style>
+    <body>
+        <div class="body">
+            <div class="sub1">Akil</div>
+            <div class="sub3">Akil</div>
+            <div class="sub2">Akil</div>
+            <div class="main">Akil</div>
+        </div>    
+    </body>
+</html>
