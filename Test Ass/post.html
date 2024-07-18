@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100;
+            margin: 23px;;
+            color: black;
+            background-color: black;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+            color:aqua;
+        }       
+    </style>
+</head>
+<body>
+    <center><h1></h1></center>
+    <div class="calendar">
+        <div class="date"></div>
+        <div class="date"><img src="po1.jfif"><center>Micky</center></div>
+        <div class="date"><img src="po2.jfif"><center><sup>Tom</sup>&<sub>Jerry</sub></center></div>
+        <div class="date"><img src="po3.jfif"><center>Cutie Pi</center></div>
+        <div class="date"><img src="po4.jfif"><center><s>Butterfly</s></center></div>
+        <div class="date"><img src="po5.jfif"><center>Yellow-crested cockatoo</center></div>
+        <div class="date"><img src="po6.jfif"><center><i>Buteo</i></center></div>
+        <div class="date"><img src="po7.jfif"><center><b>Alción Rojizo</b></center></div>
+        <div class="date"><img src="po8.jfif"><center>Blue Jay</center></div> 
+    </div>
+</body>
+</html>
